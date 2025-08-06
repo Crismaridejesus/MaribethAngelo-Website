@@ -4,22 +4,22 @@ function GettingStartedPage() {
 	return (
 		<div className='main-container flex flex-col relative items-center'>
 			<header className="bg-transparent h-fit flex flex-col w-[45%] items-center mb-[15px]">
-				<h1 className="text-[5.5vw] mt-[30px] mb-[10px]">Thank <span className="text-[rgb(189,202,45)]">You</span></h1>
-				<p className="font-[300] text-center">for registering!</p>
+				<h1 className="text-[6.5vw] mt-[30px] mb-[10px]">Thank <span className="text-[rgb(189,202,45)]">You</span></h1>
+				<p className="font-[300] text-center text-2xl">for registering!</p>
 
-				<p className="mb-[50px] font-[300]">You have taken a very important step in building your very own online business!</p>
+				<p className="mb-[50px] font-[300] text-2xl text-center">You have taken a very important step in building your very own online business!</p>
 				<div className="email-info-container bg-[rgb(189,202,45)] text-center p-[12px]">
-					<p>Check your email/junk mail to see if you got an email from my email address: <span className='email font-bold'>info@geoffjen.com</span></p>
+					<p className="text-2xl">Check your email/junk mail to see if you got an email from my email address: <span className='email font-bold'>info@geoffjen.com</span></p>
 				</div>
 				<div className='other-info-container bg-[rgb(189,202,45)] py-[30px] px-[10px] my-[30px] w-full'>
-					<p className="text-center">I've Emailed a Link to Our <span className="font-bold">Live Webinar</span></p>
+					<p className="text-center text-2xl">I've Emailed a Link to Our <span className="font-bold">Live Webinar</span></p>
 				</div>
 			</header>
 			<section className="webinar-section bg-white w-full flex items-center flex-col">
-				<h1 className="my-[30px]">
+				<h2 className="my-[30px] text-4xl">
 					Here is a Replay You Can Watch NOW:
-				</h1>
-				<div className='replay-video-wrapper w-[70%] h-[80vh] mb-[50px] bg-red-300 '>
+				</h2>
+				<div className='replay-video-wrapper w-full max-w-3/4 max-lg:min-w-5/6 h-[80vh] mb-[50px] bg-red-300 max-lg:h-[60vh] '>
 					  <iframe
       width="100%"
       height="100%"
@@ -54,6 +54,7 @@ function GettingStartedPage() {
 			justify-center
 			py-[30px]
 			px-[10px]
+			
 			'>
 				<div className='footer-wrapper
 				w-[70%]
@@ -61,6 +62,8 @@ function GettingStartedPage() {
 				items-center
 				justify-evenly
 				gap-[20px]
+				max-lg:flex-col
+				max-lg:w-[90%]
 
 				'>
 					<div className='facebook-icon'>
@@ -80,7 +83,7 @@ function GettingStartedPage() {
 						px-[30px]
 						bg-[rgb(189,202,45)]
 						shadow-[6px_6px_10px]
-						shadow-[rgb(82, 82, 82)]
+						shadow-[rgb(82,82,82)]
 						border-0
 						text-white
 						cursor-pointer
