@@ -38,7 +38,7 @@ function AboutSection() {
 				"
 				
 				>
-					<img className="size-full" src="../../public/maribeth.jpg" alt="Photos of Members" />
+					<img className="size-full" src="./maribeth.jpg" alt="Photos of Members" />
 				</div>
 				<div className="content-container 
 				bg-[#848f0e] 
