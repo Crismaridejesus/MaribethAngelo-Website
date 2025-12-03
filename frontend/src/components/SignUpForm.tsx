@@ -4,11 +4,14 @@ import axios from 'axios';
 
 
 
+
+
 function SignUpForm() {
 	const navigate = useNavigate();
 	const [name, setName] = useState<string>("");
 	const [email, setEmail] = useState<string>("");
 	const [agreed, setAgreed] = useState<boolean>(false);
+
 
 	const handleSubmit = async (e : React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
@@ -17,9 +20,9 @@ function SignUpForm() {
 			alert('You must agree to the Terms and Conditions before signing up.');
 			return;
 		}
-
+     const apiUrl = process.env.REACT_APP_API_URL;
 		try {
-			await axios.post("http://localhost:5000/api/signup", { name, email });
+			await axios.post(`${apiUrl}/api/signup`, { name, email });
 			alert("Sign up successfully!");
 			setName("");
 			setEmail("");
