@@ -79,7 +79,7 @@ function AboutSection() {
 					text-end mt-[40px] 
 					max-lg:text-[3vw]
 					
-					"> Geoff and Jenn Luke</p>
+					">Maribeth  and Angelo</p>
 				</div>
 			</div>
 		</div>
