@@ -8,7 +8,7 @@ dotenv.config();
 const app = express();
 
 
-app.use(cors());//allow frontend to call backend
+app.use(cors({ origin: "https://maribeth-angelo-business-introducti.vercel.app" }));
 app.use(express.json());//parse incoming json request
 app.use('/api/signup', signupRoute);//route
 
