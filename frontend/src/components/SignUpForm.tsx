@@ -20,7 +20,7 @@ function SignUpForm() {
 			alert('You must agree to the Terms and Conditions before signing up.');
 			return;
 		}
-     const apiUrl = process.env.REACT_APP_API_URL;
+     const apiUrl = process.env.VITE_API_URL;
 		try {
 			await axios.post(`${apiUrl}/api/signup`, { name, email });
 			alert("Sign up successfully!");

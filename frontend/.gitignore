@@ -25,3 +25,6 @@ dist-ssr
 *.mp4
 node_modules
 
+.vercel
+.env*.local
+.env
