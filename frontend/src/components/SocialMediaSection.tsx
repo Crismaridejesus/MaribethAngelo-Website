@@ -3,7 +3,7 @@ import facebookIcon from "../assets/images/facebook.png";
 import youtubeIcon from "../assets/images/youtube.png";
 import instagramIcon from "../assets/images/Instagram.png";
 import linkedInIcon from "../assets/images/LinkedIn.png";
-import pinterestIcon from "../assets/images/pinterest.png";
+import pinterestIcon from "../assets/images/Pinterest.png";
 import Icons from './Icons.js';
 function SocialMediaSection() {
 	return (
