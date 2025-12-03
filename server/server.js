@@ -7,9 +7,6 @@ import signupRoute from './routes/signup.js';
 dotenv.config();
 const app = express();
 
-
-import cors from "cors";
-
 const allowedOrigins = [
 	"https://maribeth-angelo-business-introduction-website-email-1np23fuzo.vercel.app", // replace with your frontend deployment URL
 ];
