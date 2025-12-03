@@ -8,7 +8,7 @@ dotenv.config();
 const app = express();
 
 
-app.use(cors({ origin: "https://maribeth-angelo-business-introducti.vercel.app" }));
+app.use(cors());//allow frontend to call backend
 app.use(express.json());//parse incoming json request
 app.use('/api/signup', signupRoute);//route
 
@@ -22,7 +22,7 @@ mongoose.connect(process.env.MONGO_URI).then(() => {
 	console.error("❌ MongoDB connection failed:", err);
 });
 
-export default app;
+export default app
 
 
 
