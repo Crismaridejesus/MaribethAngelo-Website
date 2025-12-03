@@ -14,38 +14,19 @@ app.use('/api/signup', signupRoute);//route
 
 const PORT = process.env.PORT || 5000;
 
-//Connect to mongoDB and Start server
+//Connect to mongoDB 
 mongoose.connect(process.env.MONGO_URI).then(() => {
-	;
+
 	console.log("✅ Connected to MongoDB");
-	app.listen(PORT, () => {
-		console.log(`🚀 server is running on port ${PORT}`);
-	});
 }).catch((err) => {
 	console.error("❌ MongoDB connection failed:", err);
 });
 
+export default app;
 
 
 
 
-
-// try {
-// 	if (!process.env.MONGO_URI) {
-// 		console.warn("⚠️ No Mongo_URI defined. Skipping DB connection.");
-// 	} else {
-// 		import("mongoose").then(({ default: mongoose }) => {
-// 			mongoose.connect(process.env.MONGO_URI).then(() => {
-// 				console.log("✅ Connected to MongoDB");
-// 				app.listen(PORT, () => {
-// 					console.log(`server is running on port ${PORT}`);
-// 				});
-// 			});
-// 		});
-// 	}
-// } catch (err) {
-// 	console.error("❌ Error connecting to DB:", err);
-// }
 
 
 
