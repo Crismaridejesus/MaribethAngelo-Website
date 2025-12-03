@@ -8,7 +8,26 @@ dotenv.config();
 const app = express();
 
 
-app.use(cors());//allow frontend to call backend
+import cors from "cors";
+
+const allowedOrigins = [
+	"https://maribeth-angelo-business-introduction-website-email-1np23fuzo.vercel.app", // replace with your frontend deployment URL
+];
+
+app.use(
+	cors({
+		origin: function (origin, callback) {
+			// allow requests with no origin (like Postman)
+			if (!origin) return callback(null, true);
+			if (allowedOrigins.indexOf(origin) === -1) {
+				const msg = "The CORS policy for this site does not allow access from the specified origin.";
+				return callback(new Error(msg), false);
+			}
+			return callback(null, true);
+		},
+	})
+);
+
 app.use(express.json());//parse incoming json request
 app.use('/api/signup', signupRoute);//route
 
