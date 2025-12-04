@@ -1,0 +1,12 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "echo 'No build needed for serverless API'"
+  },
+  "dependencies": {
+    "mongoose": "^8.16.3",
+    "nodemailer": "^7.0.5"
+  }
+}
