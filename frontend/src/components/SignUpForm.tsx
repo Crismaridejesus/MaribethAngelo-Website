@@ -20,8 +20,9 @@ function SignUpForm() {
 			alert('You must agree to the Terms and Conditions before signing up.');
 			return;
 		}
-     const apiUrl = process.env.VITE_API_URL;
+  
 		try {
+			const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:3000';
 			await axios.post(`${apiUrl}/api/signup`, { name, email });
 			alert("Sign up successfully!");
 			setName("");
@@ -56,7 +57,7 @@ function SignUpForm() {
 					flex-[2] 
 					py-[15px] 
 					px-[20px] 
-					text=[1.2rem] 
+					text-[1.2rem] 
 					bg-white
 					max-md:text-[1rem]
 
