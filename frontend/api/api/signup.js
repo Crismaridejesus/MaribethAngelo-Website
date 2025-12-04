@@ -1,6 +1,6 @@
 // api/signup.js
 import { connectDB } from "./db.js";
-import User from "./models/users.js";
+import User from "../models/users.js";
 import nodemailer from "nodemailer";
 
 const allowedOrigins = [
