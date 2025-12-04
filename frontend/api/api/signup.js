@@ -5,7 +5,7 @@ import nodemailer from "nodemailer";
 
 const allowedOrigins = [
 	"http://localhost:5173", // local dev frontend
-	"https://your-frontend-vercel-url.vercel.app", // replace with your deployed frontend URL
+	"https://maribeth-angelo-business-website-introduction-to-cr7ewpl4o.vercel.app", // replace with your deployed frontend URL
 ];
 
 export default async function handler(req, res) {
