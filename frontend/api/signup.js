@@ -45,7 +45,7 @@ export default async function handler(req, res) {
 		});
 
 		await transporter.sendMail({
-			from: `"BDO" <${process.env.MAIL_USER}>`,
+			from: `"MaribethAngelo" <${process.env.MAIL_USER}>`,
 			to: email,
 			subject: "Welcome to Maribeth & Anghelo Business Community 🎉",
 			html: `<h1>Hello ${name},</h1>

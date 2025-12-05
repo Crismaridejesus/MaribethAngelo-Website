@@ -11,10 +11,12 @@ function SignUpForm() {
 	const [name, setName] = useState<string>("");
 	const [email, setEmail] = useState<string>("");
 	const [agreed, setAgreed] = useState<boolean>(false);
+	const [isLoading, setIsLoading] =useState<boolean>(false);
 
 
 	const handleSubmit = async (e : React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
+		setIsLoading(true);
 
 		if (!agreed) {
 			alert('You must agree to the Terms and Conditions before signing up.');
@@ -25,6 +27,7 @@ function SignUpForm() {
 			const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:3000';
 			await axios.post(`${apiUrl}/api/signup`, { name, email });
 			alert("Sign up successfully!");
+			setIsLoading(false);
 			setName("");
 			setEmail("");
 			setAgreed(false);
@@ -84,14 +87,26 @@ function SignUpForm() {
 					/>
 					<button type="submit" className='signUpButton 
 					flex-[1] 
-					bg-transparent 
-					text-center 
+					bg-transparent
+					text-center
 					text-white 
 					border-3 
 					border-solid 
 					border-[rgb(199,233,61)]
 					max-sm:p-[15px]
-					'>SIGN UP!</button>
+					cursor-pointer
+					hover:bg-neutral-50/30
+					transition
+					duration-250
+					east-in
+					flex
+					justify-center
+					items-center
+					'>
+					 {isLoading ? (<div className="animate-spin h-4 w-4 border-2 border-white border-t-transparent border-dotted rounded-full transition duration-500"></div>
+  ): ('SIGN UP')}
+					
+					</button>
 				</div>
 
 				<div className="terms-section 
